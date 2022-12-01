@@ -1,0 +1,12 @@
+class Solution
+{
+    public:
+   int MissingNumber(vector<int>& array, int n) {
+        // Your code goes here
+        int res = n;
+        for(int i=1; i<n; i++)
+            res ^=(i ^ array[i-1]);
+        return res;
+        
+    }
+};
